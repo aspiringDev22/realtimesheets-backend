@@ -4,7 +4,9 @@ import { getDocument, updateDocument } from './controller/documentController.js'
 
 Connection();
 
-const io = new Server(process.env.PORT, {
+const Port = process.env.PORT || 9000;
+
+const io = new Server(Port, {
   cors: {
     origin: process.env.CORS_ORIGIN,
     methods: ['GET', 'POST'],
