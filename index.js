@@ -8,7 +8,7 @@ const Port = process.env.PORT || 9000;
 
 const io = new Server(Port, {
   cors: {
-    origin: process.env.CORS_ORIGIN,
+    origin: "*",
     methods: ['GET', 'POST'],
   },
 });
